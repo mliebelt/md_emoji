@@ -15,6 +15,10 @@ module MdEmoji
       "<li>#{replace_emoji(text)}</li>"
     end
 
+    def header(text, header_level)
+      "<h#{header_level}>#{replace_emoji(text)}</h#{header_level}>"
+    end
+
     # Replaces valid emoji characters, ie :smile:, with img tags
     #
     # Valid emoji charaters are listed in +MdEmoji::EMOJI+
