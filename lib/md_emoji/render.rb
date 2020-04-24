@@ -30,10 +30,10 @@ module MdEmoji
 
         if MdEmoji::EMOJI.include?(emoji)
           file_name    = "#{emoji.gsub('+', 'plus')}.png"
-          default_size = %{height="20" width="20"}
+          #default_size = %{height="20" width="20"}
 
           %{<img src="/assets/emojis/#{file_name}" class="emoji" } +
-            %{title="#{emoji}" alt="#{emoji}" #{default_size}>}
+            %{title="#{emoji}" alt="#{emoji}">}
         else
           emoji_code
         end
